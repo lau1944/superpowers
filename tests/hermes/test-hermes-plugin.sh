@@ -11,7 +11,7 @@ import sys
 from pathlib import Path
 
 repo_root = Path(sys.argv[1])
-plugin_yaml = repo_root / "plugin.yaml"
+plugin_yaml = repo_root / ".hermes-plugin" / "plugin.yaml"
 plugin_init = repo_root / "__init__.py"
 hermes_tools = repo_root / "skills" / "using-superpowers" / "references" / "hermes-tools.md"
 
@@ -32,7 +32,7 @@ for expected in [
 
 version_config = json.loads((repo_root / ".version-bump.json").read_text(encoding="utf-8"))
 if not any(
-    entry.get("path") == "plugin.yaml" and entry.get("field") == "version"
+    entry.get("path") == ".hermes-plugin/plugin.yaml" and entry.get("field") == "version"
     for entry in version_config.get("files", [])
     if isinstance(entry, dict)
 ):

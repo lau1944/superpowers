@@ -162,10 +162,7 @@ hermes plugins update superpowers
 hermes plugins remove superpowers
 ```
 
-The Hermes plugin registers the bundled Superpowers skills under the
-`superpowers:` namespace and injects the `using-superpowers` bootstrap through a
-`pre_llm_call` hook, so Superpowers is active from the first turn. Detailed docs:
-[docs/README.hermes.md](docs/README.hermes.md).
+Detailed docs: [docs/README.hermes.md](docs/README.hermes.md).
 
 ### Kimi Code
 
